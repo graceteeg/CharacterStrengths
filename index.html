@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Strengths Portal</title>
+  <meta name="description" content="A warm academic strengths reflection and affirmation activity." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="min-h-screen">
+    <header class="mx-auto max-w-7xl px-4 py-5 md:px-8">
+      <nav class="glass-panel flex flex-col gap-3 rounded-3xl px-5 py-4 md:flex-row md:items-center md:justify-between">
+        <button class="brand text-left" data-nav="landing" aria-label="Go to landing page">
+          <span class="brand-mark">✎</span>
+          <span>
+            <span class="block text-lg font-bold tracking-wide">Strengths Reflection</span>
+            <span class="block text-xs text-indigo-100/70">A strengths reflection space</span>
+          </span>
+        </button>
+        <div class="hidden text-sm text-indigo-100/70 md:block">
+          Explore • Affirm • Reveal
+        </div>
+      </nav>
+    </header>
+
+    <section id="toast" class="toast hidden" role="status" aria-live="polite"></section>
+
+    <div id="app" class="mx-auto max-w-7xl px-4 pb-16 md:px-8"></div>
+  </main>
+
+  <template id="strength-card-template">
+    <button class="strength-card" type="button">
+      <span class="strength-emoji"></span>
+      <span class="strength-name"></span>
+      <span class="strength-desc"></span>
+    </button>
+  </template>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
